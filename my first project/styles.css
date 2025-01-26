@@ -1,0 +1,108 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  z-index: 1;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Typewriter Animation */
+.typewriter {
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 100%;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  animation: typing 6s steps(50, end), blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+/* Glow Effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff6f91, 0 0 20px #ff6f91, 0 0 30px #ff6f91;
+  }
+  to {
+    text-shadow: 0 0 20px #ff85a1, 0 0 40px #ff85a1, 0 0 50px #ff85a1;
+  }
+}
+
+/* Tulip Animation */
+.tulip-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.tulip {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url('./images/icons8-tulip-64.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100%) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
